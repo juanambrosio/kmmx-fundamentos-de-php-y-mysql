@@ -10,7 +10,7 @@ class Router {
 
     public function __construct()
     {
-        $this->setRoute('/404', '/not-found');
+        $this->setRoute('/not-found', '/not-found');
     }
 
     /**
@@ -43,8 +43,8 @@ class Router {
             require_once $this->routes[$uri]['controller'];
             require_once $this->routes[$uri]['view'];
         else :
-            require_once $this->routes['/404']['controller'];
-            require_once  $this->routes['/404']['view'];
+            require_once $this->routes['/not-found']['controller'];
+            require_once  $this->routes['/not-found']['view'];
         endif;
     }
 }
