@@ -4,6 +4,10 @@
     define('API_CTRLS_DIR', __DIR__ . "/api");
     define('VIEWS_DIR', __DIR__ . "/views");
     define('CTRLS_DIR', __DIR__ . "/controllers");
+
+    connectionMysql();
+    die();
+
     if (startsWith($_SERVER["REQUEST_URI"], '/api/')) {
         $apiRouter = new \core\Api\Api();
         // Start Api Route Setup
