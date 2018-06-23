@@ -2,9 +2,21 @@
 <html lang="es-MX">
 <?php include(VIEWS_DIR . "/partials/head.phtml"); ?>
 <body>
+
 <?php include(VIEWS_DIR . "/partials/header.phtml"); ?>
 <main class="container">
-    <h1>Lista de productos</h1>
+    <h1>Registro de Cliente</h1>
+    <?php
+
+    echo $name = $_POST["name"];
+    echo "<br />";
+    echo $address= $_POST["address"];
+    echo "<br />";
+    echo $email = $_POST["email"];
+    echo "<br />";
+    echo $pass = $_POST["pass"];
+    ?>
+
 </main>
 <?php include(VIEWS_DIR . "/partials/footer.phtml"); ?>
 <?php include(VIEWS_DIR . "/partials/scripts.phtml"); ?>

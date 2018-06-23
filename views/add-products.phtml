@@ -5,7 +5,7 @@
     <?php include(VIEWS_DIR . "/partials/header.phtml"); ?>
     <main class="container">
         <h1>Agregar productos</h1>
-        <form action="/api/V1/products" method="POST" enctype="multipart/form-data">
+        <form action="/add-products-success" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="product_name">Nombre del producto</label>
                 <input type="text" required
@@ -21,6 +21,14 @@
                        id="sku"
                        name="sku"
                        placeholder="Ingresa el SKU" />
+            </div>
+            <div class="form-group">
+                <label for="qty">CANTIDAD</label>
+                <input type="text"
+                       class="form-control"
+                       id="qyt"
+                       name="qty"
+                       placeholder="Ingresa la cantidad del producto" />
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">

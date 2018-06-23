@@ -5,8 +5,8 @@
     define('VIEWS_DIR', __DIR__ . "/views");
     define('CTRLS_DIR', __DIR__ . "/controllers");
 
-    connectionMysql();
-    die();
+   // connectionMysql();
+   // die();
 
     if (startsWith($_SERVER["REQUEST_URI"], '/api/')) {
         $apiRouter = new \core\Api\Api();
@@ -19,6 +19,11 @@
         $router->setRoute('/', 'home');
         $router->setRoute('/add-products', 'add-products');
         $router->setRoute('/product-list', 'list-products');
+        $router->setRoute('/add-products-success', 'add-products-success');
+        $router->setRoute('/add-user', 'add-user');
+        $router->setRoute('/add-user-success', 'add-user-success');
+
+
         // End Route View Setup
         $router->loadView($_SERVER["REQUEST_URI"]);
     }

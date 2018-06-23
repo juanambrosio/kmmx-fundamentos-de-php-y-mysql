@@ -2,9 +2,20 @@
 <html lang="es-MX">
 <?php include(VIEWS_DIR . "/partials/head.phtml"); ?>
 <body>
+
 <?php include(VIEWS_DIR . "/partials/header.phtml"); ?>
 <main class="container">
-    <h1>Lista de productos</h1>
+    <h1>Producto Nuevo</h1>
+    <?php
+        echo $productName = $_POST["product_name"];
+        echo "<br />";
+        echo $sku = $_POST["sku"];
+        echo "<br />";
+        echo $price = $_POST["price"];
+        echo "<br />";
+        echo $qty = $_POST["qty"];
+ ?>
+
 </main>
 <?php include(VIEWS_DIR . "/partials/footer.phtml"); ?>
 <?php include(VIEWS_DIR . "/partials/scripts.phtml"); ?>

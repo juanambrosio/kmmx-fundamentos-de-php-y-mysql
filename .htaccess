@@ -4,4 +4,11 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
+    # Start Env variables
+    SetEnv MYSQL_SERVER localhost
+    SetEnv MYSQL_USERNAME juan
+    SetEnv MYSQL_PASSWORD Password12!
+    SetEnv MYSQL_DATABASE prueba
+    SetEnv SALT se_usa_para_encriptar
+    # End Env variables
 </IfModule>
